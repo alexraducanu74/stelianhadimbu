@@ -35,7 +35,16 @@ Sort::Sort(int nr_elem, ...) {
 	size = count;
 }
 Sort::Sort(char* c) {
-	v = new int[strlen(c)];
+	int k = 0;
+	int contor = 0;
+	while (c[k] != '\0')
+		
+	{
+		if (c[k] == ',')
+		contor++;
+		k++;
+	}
+	v = new int[strlen(c)-contor];
 	int nr_curent = 0;
 	char* p = strtok(c, ",");
 	int idx = 0;
